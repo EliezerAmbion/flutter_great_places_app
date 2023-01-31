@@ -26,6 +26,12 @@ class _ImageInputWidgetState extends State<ImageInputWidget> {
       source: ImageSource.camera,
       maxHeight: 600,
     );
+
+    // if no image was taken
+    if (imageFile == null) {
+      return;
+    }
+
     setState(() {
       _storedImage = File((imageFile as XFile).path);
     });
