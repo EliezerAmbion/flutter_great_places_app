@@ -15,7 +15,7 @@ class PlaceLocationModel {
 class PlaceModel {
   final String id;
   final String title;
-  final PlaceLocationModel location; // you used PlaceLocationModel here
+  final PlaceLocationModel? location; // you used PlaceLocationModel here
   final File image;
 
   PlaceModel({
