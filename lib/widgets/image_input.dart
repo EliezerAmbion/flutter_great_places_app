@@ -25,6 +25,7 @@ class _ImageInputWidgetState extends State<ImageInputWidget> {
     final imageFile = await picker.pickImage(
       source: ImageSource.camera,
       maxHeight: 600,
+      preferredCameraDevice: CameraDevice.rear,
     );
 
     // if no image was taken

@@ -21,6 +21,7 @@ class GreatPlacesProvider with ChangeNotifier {
       location: null,
       image: pickedImage,
     );
+
     _items.add(newPlace);
     notifyListeners();
 
@@ -35,9 +36,11 @@ class GreatPlacesProvider with ChangeNotifier {
     });
   }
 
-  Future<void> fetAndSetPlaces() async {
+  Future<void> fetchAndSetPlaces() async {
+    // get the data using .getData method you created in db_helper
     final dataList = await DBHelper.getData('user_places');
 
+    // then set it to _items
     _items = dataList
         .map(
           (item) => PlaceModel(

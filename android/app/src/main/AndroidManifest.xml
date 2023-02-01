@@ -1,5 +1,12 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.example.flutter_great_places_app">
+
+    <!-- add these 2 to use location package in android -->
+    <!-- should be inside manifest node and outside of the application node -->
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE" />
+    <uses-permission android:name="android.permission.ACCESS_BACKGROUND_LOCATION"/>
+    <!-- add these to use location package in android -->
+
    <application
         android:label="flutter_great_places_app"
         android:name="${applicationName}"
