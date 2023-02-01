@@ -7,7 +7,7 @@ import 'package:path/path.dart' as path;
 class DBHelper {
   // generic function to create the database
   static Future<sql.Database> database() async {
-    // Get a location using getDatabasesPath
+    // Get a db location using getDatabasesPath
     final databasesPath = await sql.getDatabasesPath();
     // .db is the extension of our database file (ex: places.db)
     String createdPath = path.join(databasesPath, 'places.db');
